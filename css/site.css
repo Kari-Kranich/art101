@@ -1,7 +1,11 @@
 
+.background{
+  background-color: purple;
+  min-height: 20px;
+}
 
 p{
-  color: red;
+  color: purple;
   font-weight: bold;
 }
 
