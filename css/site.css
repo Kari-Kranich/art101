@@ -1,18 +1,147 @@
-
-.background{
-  background-color: purple;
-  min-height: 20px;
+.header{
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    font-size: 30px;
+    width: 50%;
 }
 
-p{
-  color: purple;
-  font-weight: bold;
+body{
+    /* background-color: #000000; */
+    margin : 0px auto;
+    margin-left: 5%;
 }
 
-#callout {
-  background: #dfeced;
-  padding: 20px;
-  margin: 10px;
-  border: solid 1 px black;
-  border-radius: 20px;
+html {
+    background-color: #f42069;
+    background-size: cover;
+    height: 100%;
+}
+
+h1 {
+    font-size: 30px;
+    font-style: bold;
+}
+
+#header-overlay{
+    background-color: rgb(192, 136, 248);
+    z-index: 9;
+    margin: 20px;
+}
+
+.gamecanvas{
+    border : 10px solid #464646;
+    background-color: #241050;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div#boxcollide_buttons{
+    border :10px solid #ffffff;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+button.gamebutton{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+}
+
+.gamebutton#up{
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gamebutton#down{
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gamebutton#left{
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+}
+
+.gamebutton#right{
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+}
+
+p.info{
+    color : white;
+    padding: 5%;
+}
+
+.parallax-background {
+    /*The image used */
+    /*background-image: url('../img/vaporwave_medusa.png');*/
+    /*background-color: aliceblue;*/
+    /* Full height */
+    min-height: 2000px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+
+
+/* ===================== Positions around a div ======================== */
+
+/* Bottom left text */
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+/* Top left text */
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+/* Top right text */
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Top Centered text */
+.top-centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
