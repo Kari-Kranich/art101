@@ -1,0 +1,19 @@
+.info{
+    background-color: aliceblue;
+}
+
+.info p {
+    color: red;
+    margin-left: 2%;
+    font-size: 20px;
+}
+
+div #input{
+    margin-left: 2%;
+}
+
+
+.out_table{
+    margin-left: 2%;
+    color: blueviolet;
+}

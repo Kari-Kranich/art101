@@ -28,4 +28,3 @@ $("#o_button").click(function () {
     $("#o_button").toggleClass("special");
 
 });
-}
