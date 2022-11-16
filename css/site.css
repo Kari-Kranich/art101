@@ -2,19 +2,24 @@
     color: rgb(255, 255, 255);
     background-color: #000000;
     font-size: 30px;
-    width: 50%;
+}
+
+.header h2 {
+    margin-left: 2%;
 }
 
 body{
     /* background-color: #000000; */
     margin : 0px auto;
     margin-left: 5%;
+    margin-right: 5%;
 }
 
 html {
-    background-color: #f42069;
+    background-color: pink;
     background-size: cover;
     height: 100%;
+    font-family:'Courier New';
 }
 
 h1 {
@@ -76,11 +81,6 @@ button.gamebutton{
     top: 50%;
     left: 100%;
     transform: translate(-50%, -50%);
-}
-
-p.info{
-    color : white;
-    padding: 5%;
 }
 
 .parallax-background {
