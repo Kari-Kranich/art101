@@ -1,0 +1,14 @@
+body {
+  background-color: lightblue;
+}
+
+div#output{
+    background-color: #E8B1F0;
+    font-family: papyrus;
+}
+
+div#user-name{
+  background-color: #AEADAD;
+  font-family: Copperplate;
+  color: white;
+}
