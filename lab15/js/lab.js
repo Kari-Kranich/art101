@@ -3,35 +3,34 @@
 * License: Public Domain
 */
 
-function sortUserName() {
+//URL = "https://api.nasa.gov/planetary/apod?api_key=RgNBs4TjYNVjwPSQLLvkMtIj4zOflKWVB3TikTry"
+URL = "https://jservice.io/api/random";
 
-    // GET NAME FROM USER
-    var userName = window.prompt("Name here");
-    console.log("userName =", userName);
+// attach click action to button
+$('#activate').click(function(){
+    $.ajax({
+        // The URL for the request (from the api docs)
+        url: URL,
 
-    // SPLIT NAME INTO CHARACTER ARRAY
-    var nameArray = userName.split('');
-    console.log("nameArray =", nameArray);
+        // Whether this is a POST or GET request
+        type: "GET",
 
-    // SORT THE ARRAY YOU JUST MADE
-    var nameArraySort = nameArray.sort();
-    console.log("nameArraySort =", nameArraySort);
+        // The type of data we expect back
+        dataType : "json",
 
-    // JOIN THE FULL ARRAY INTO A NEW STRING (nameSorted)
-    var nameSorted = nameArraySort.join('');
-    console.log("nameSorted =", nameSorted);
+        // What do we do when the api call is successful
+        //   all the action goes in here
+        success: function(data) {
+            // do stuff
+            // console.log(data[0]);
+            $("#out_title").html(data[0].answer);
+            $("#out_info").html(data[0].question);
+        },
 
-    // FIND THE 'OUTPUT' DIV
-    const outputEl = document.getElementById("output");
-
-    // CREATE A NEW ELEMENT, WITH nameSorted AS TEXT
-    const new1El = document.createElement("p");
-    new1El.textContent = nameSorted;
-    new1El.style.color = "purple"; // what if it was purple?
-
-    // ADD NEW ELEMENT TO THE 'OUTPUT' DIV
-    outputEl.append(new1El);
-
-    // return string
-    return nameSorted;
-}
+        // What we do if the api call fails
+        error: function (jqXHR, textStatus, errorThrown) {
+            // do stuff
+            console.log("Error:", textStatus, errorThrown);
+        }
+    })
+});
